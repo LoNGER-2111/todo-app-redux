@@ -1,29 +1,29 @@
 const initState = {
-  search: '',
-  status: 'All',
-  priorities: []
-}
+  search: "",
+  status: "All",
+  priorities: [],
+};
 
 const filtersReducer = (state = initState, action) => {
   switch (action.type) {
-    case 'filters/searchFilterChange':
+    case "filters/searchFilterChange":
       return {
         ...state,
-        search: action.payload
-      }
-    case 'filters/statusFilterChange':
+        search: action.payload,
+      };
+    case "filters/statusFilterChange":
       return {
         ...state,
-        status: action.payload
-      }
-    case 'filters/prioritiesFilterChange':
+        status: action.payload,
+      };
+    case "filters/prioritiesFilterChange":
       return {
         ...state,
-        priorities: action.payload
-      }
+        priorities: action.payload,
+      };
     default:
-      return state
+      return state;
   }
-} 
+};
 
-export default filtersReducer
+export default filtersReducer;
